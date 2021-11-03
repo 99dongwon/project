@@ -82,6 +82,7 @@
         if(id==="admin"){
             if(pw==="1234"){
                 localStorage.setItem("loginValue", 1);
+                localStorage.setItem("setIdName", id);
                 alert("로그인이 되었습니다.")
                 window.location.href = "login.html"; 
             } else {
