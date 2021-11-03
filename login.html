@@ -92,6 +92,9 @@
             window.location.href = "index.html";
         }
     }
+    window.onload = function(){
+        document.getElementById("idName").innerHTML = `Welcome, ` + localStorage.getItem("setIdName") + `!`;
+    }
 </script>
 <body>
     <header>
@@ -125,7 +128,7 @@
         </div>
         <div id="login" >
             <form class="w3-container w3-card-4 w3-black w3-round" style="margin: 0px 20%">
-                <p style="font-size: x-large; height: 20px; text-align: center; letter-spacing: 2px;"> Welcome! Admin </p>
+                <p id="idName" style="font-size: x-large; height: 20px; text-align: center; letter-spacing: 2px;"></p>
                 <input id="log-out" class="w3-button w3-round-small w3-white" style="margin: 20px 0px 30px 35%; letter-spacing: 1px;" type="submit" value="Log-Out" onclick="logout(); return false;">
             </form>
         </div>
