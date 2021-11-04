@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAILER</title>
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        font-family: 'Zen Antique', 'Arial Narrow', Arial, sans-serif;
+        max-width: 3000px;
+    }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        color: whitesmoke;
+        letter-spacing: 5px;
+    }
+    #sitename a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: x-large;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 5px 0px 0px 0px;
+    }
+    nav ul li {
+        display: inline-block;
+        letter-spacing: 5px;
+        padding: 10px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: larger;
+    }
+    #title {
+        padding: 120px 0px 50px 0px;
+        text-align: center;
+    }
+    article div iframe {
+        width: 400px;
+        height: 225px;
+        margin-top: 150px;
+    }
+    #firstLine, #secondLine, #thirdLine, #fourthLine, #fifthLine, #sixthLine {
+        display: flex;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    h4 {
+        font-family: 'Zen Antique';
+        margin-top: 145px;
+        margin-left: 50px;
+    }
+    a {
+        text-decoration: none;
+    }
+    footer {
+        background-color: black;
+        color: whitesmoke;
+        height: 550px;
+        width: 100%;
+        position: absolute;
+    }
+    footer div ul li a {
+        list-style-type: none;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+</style>
+<script>
+    function w3_open(){
+        document.getElementById("mySidebar").style.display = "block";
+    }
+    function w3_close(){
+        document.getElementById("mySidebar").style.display = "none";
+    }
+    function openMain(){
+        if(localStorage.getItem("loginValue") == 1) {
+            window.location.href = "login.html"; 
+        } else {
+            window.location.href = "index.html";
+        }
+    }
+    function openGames(){
+        if(localStorage.getItem("loginValue") == 1) {
+            window.location.href = "games.html"; 
+        } else {
+            window.location.href = "gamesLogin.html";
+        }
+    }
+</script>
+<body>
+    <header>
+        <div id="sidebar" style="flex: 1">
+            <button class="w3-button w3-large" onclick="w3_open()">☰</button>
+        </div>
+        <div id="sitename" style="flex: 25">
+            <a href="#" onclick="openMain(); return false;"><span>Project S</span></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./news.html">NEWS</a></li>
+                <li><a href="./trailer.html">TRAILER</a></li>
+                <li><a href="#" onclick="openGames(); return false;">GAMES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="w3-sidebar w3-bar-block w3-black w3-animate-left" style="display:none" id="mySidebar">
+        <p style="margin: 15px 0px 50px 15px; font-size: x-large;">MENU</p>
+        <a href="#" onclick="openMain(); return false;" class="w3-bar-item w3-button w3-hover-none w3-hover-text-grey">MAIN</a>
+        <a href="./news.html" class="w3-bar-item w3-button w3-hover-none w3-hover-text-grey">NEWS</a>
+        <a href="./trailer.html" class="w3-bar-item w3-button w3-hover-none w3-hover-text-grey">TRAILER</a>
+        <a href="#" onclick="openGames(); return false;" class="w3-bar-item w3-button w3-hover-none w3-hover-text-grey">GAMES</a>
+        <button style="margin: 0px 0px 50px 0px;" class="w3-bar-item w3-button w3-large w3-display-bottomleft" onclick="w3_close()">Close &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&times;</button>
+        <p style="margin: 10px 0px 10px 15px;" class="w3-display-bottomleft">&copy; Dongwon Shin</p>
+    </div>
+    <section>
+        <div id="title" style="background-image: url(./project_image/img3.jpg); background-repeat: no-repeat; background-size: cover; width: 100%;">
+            <h2 style="font-family: 'Zen Antique'; font-size: 1000%;">TRAILER</h2>
+            <h2 style="font-family: 'Zen Antique'; font-size: 480%; margin-top: -50px;">Video game trailers</h2>
+        </div>
+        <article id="article" style="background-color: black; color: whitesmoke;">
+            <article id="firstLine">
+                <div id="v1">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FUoqAn5T4h4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id="v1-title">
+                    <a href="https://youtu.be/FUoqAn5T4h4" target="_blank">
+                        <h4 class="w3-hover-opacity">VALORANT L’Accord - Chamber Agent Trailer</h4>
+                    </a>
+                    <h4 style="margin-top: 140px;">by RIOTGAMES</h4>
+                </div>
+            </article>
+            <hr style="color: whitesmoke; max-width: 800px; margin: 0 auto; margin-top: 80px;">
+            <article id="secondLine">
+                <div id="v2" style="margin-top: -50px;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RD8mIeo-r2s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id="v2-title" style="margin-top: -50px;"> 
+                    <a href="https://youtu.be/RD8mIeo-r2s" target="_blank">
+                        <h4 class="w3-hover-opacity">RUST - HALLOWEEN DARKNESS FALLS TRAILER</h4>
+                    </a>
+                    <h4 style="margin-top: 140px;">by Facepunch</h4>
+                </div>
+            </article>
+            <hr style="color: whitesmoke; max-width: 800px; margin: 0 auto; margin-top: 80px;">
+            <article id="thirdLine">
+                <div id="v3" style="margin-top: -50px;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lrrJQ4qcs5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id="v3-title" style="margin-top: -50px;">
+                    <a href="https://youtu.be/lrrJQ4qcs5E" target="_blank">
+                        <h4 class="w3-hover-opacity">THE DARK PICTURES ANTHOLOGY THE DEVIL IN ME ANNOUNCEMENT TRAILER</h4>
+                    </a>
+                    <h4 style="margin-top: 110px;">by BANDAI NAMCO Europe</h4>
+                </div>
+            </article>
+            <hr style="color: whitesmoke; max-width: 800px; margin: 0 auto; margin-top: 80px;">
+            <article id="fourthLine">
+                <div id="v4" style="margin-top: -50px;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0kQjFqkeOTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id="v4-title" style="margin-top: -50px;">
+                    <a href="https://youtu.be/0kQjFqkeOTQ" target="_blank">
+                        <h4 class="w3-hover-opacity">THE ELDER SCROLLS V: SKYRIM ANNIVERSARY EDITION AND UPGRADE OVERVIEW VIDEO TRAILER</h4>
+                    </a>
+                    <h4 style="margin-top: 80px;">by Bethesda Softworks</h4>
+                </div>
+            </article>
+            <hr style="color: whitesmoke; max-width: 800px; margin: 0 auto; margin-top: 80px;">
+            <article id="fifthLine">
+                <div id="v5" style="margin-top: -50px;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CetTZ9cYPd4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id="v5-title" style="margin-top: -50px;">
+                    <a href="https://youtu.be/CetTZ9cYPd4" target="_blank">
+                        <h4 class="w3-hover-opacity">APEX LEGENDS ASH CHARACTER TRAILER</h4>
+                    </a>
+                    <h4 style="margin-top: 140px;">by Apex Legends</h4>
+                </div>
+            </article>
+            <hr style="color: whitesmoke; max-width: 800px; margin: 0 auto; margin-top: 80px;">
+            <article id="sixthLine">
+                <div id="v6" style="margin-top: -50px;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ki5CKuBA6r0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id="v6-title" style="margin-top: -50px;">
+                    <a href="https://youtu.be/Ki5CKuBA6r0" target="_blank">
+                        <h4 class="w3-hover-opacity">DIABLO IMMORTAL CLOSED BETA TRAILER</h4>
+                    </a>
+                    <h4 style="margin-top: 140px;">by Diablo Immortal</h4>
+                </div>
+            </article>
+            <hr style="color: whitesmoke; max-width: 800px; margin: 0 auto; margin-top: 80px;">
+        </article>
+    </section>
+    <footer>
+        <div id="footer" style="margin: 230px 0px 2% 39.7%;">
+            <p>&copy; Dongwon Shin</p>
+            <p>E-mail. shin112903@naver.com</p>
+            <p>SNS <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></p>
+        </div>
+        <article style="display: flex; max-width: 25%; margin: 0 auto;">
+            <div id="num1" style="flex: 33%;">
+                <ul style="list-style-type: none;">
+                    <li><a href="#". onclick="openMain(); return false;">MAIN</a></li>
+                    <li><a href="./news.html">NEWS</a></li>
+                    <li><a href="./trailer.html">TRAILER</a></li>
+                    <li><a href="#" onclick="openGames(); return false;">GAMES</a></li>
+                </ul>
+            </div>
+            <div id="num2" style="flex: 33%;">
+                <ul style="list-style-type: none;">
+                    <li><a href="https://www.nexon.com/Home/Game" target="_blank">NEXON</a></li>
+                    <li><a href="https://www.riotgames.com/ko" target="_blank">RIOT</a></li>
+                    <li><a href="https://www.krafton.com/" target="_blank">KRAFTON</a></li>
+                    <li><a href="https://www.blizzard.com/ko-kr/" target="_blank">BLIZZARD</a></li>
+                </ul>
+            </div>
+            <div id="num3" style="flex: 33%;">
+                <ul style="list-style-type: none;">
+                    <li><a href="https://store.steampowered.com/?l=koreana" target="_blank">STEAM</a></li>
+                    <li><a href="https://www.origin.com/kor/ko-kr/store" target="_blank">ORIGIN</a></li>
+                    <li><a href="https://store.ubi.com/kr/home" target="_blank">UPLAY</a></li>
+                    <li><a href="https://www.epicgames.com/store/ko/" target="_blank">EPIC</a></li>
+                </ul>
+            </div>
+    </footer>
+</body>
+</html>
