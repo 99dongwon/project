@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wecome to Project S</title>
+</head>
+<style>
+    * {
+        font-family: 'Zen Antique', 'Arial Narrow', Arial, sans-serif;
+        max-width: 3000px;
+    }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        color: whitesmoke;
+        letter-spacing: 5px;
+        z-index: 1;
+    }
+    #sitename a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: x-large;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 5px 0px 0px 0px;
+    }
+    nav ul li {
+        display: inline-block;
+        letter-spacing: 5px;
+        padding: 10px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: larger;
+    }
+</style>
+<body>
+    <header>
+        <div id="sidebar" style="flex: 1">
+            <button class="w3-button w3-large" onclick="w3_open()">☰</button>
+        </div>
+        <div id="sitename" style="flex: 25">
+            <a href="./index.html"><span>Project S</span></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./news.html">NEWS</a></li>
+                <li><a href="./trailer.html">TRAILER</a></li>
+                <li><a href="./gamesLogin.html">GAMES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="w3-sidebar w3-bar-block w3-black w3-animate-left" style="display:none" id="mySidebar">
+        <p style="margin: 15px 0px 50px 15px; font-size: x-large;">MENU</p>
+        <a href="./index.html" class="w3-bar-item w3-button w3-hover-none w3-hover-text-grey">MAIN</a>
+        <a href="./news.html" class="w3-bar-item w3-button w3-hover-none w3-hover-text-grey">NEWS</a>
+        <a href="./trailer.html" class="w3-bar-item w3-button w3-hover-none w3-hover-text-grey">TRAILER</a>
+        <a href="./gamesLogin.html" class="w3-bar-item w3-button w3-hover-none w3-hover-text-grey">GAMES</a>
+        <button style="margin: 0px 0px 50px 0px;" class="w3-bar-item w3-button w3-large w3-display-bottomleft" onclick="w3_close()">Close &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&times;</button>
+        <p style="margin: 10px 0px 10px 15px;" class="w3-display-bottomleft">&copy; Dongwon Shin</p>
+    </div>
+</body>
+</html>
